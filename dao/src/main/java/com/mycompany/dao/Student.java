@@ -5,25 +5,53 @@
  */
 package com.mycompany.dao;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 /**
  *
  * @author W208412665
  */
 public class Student {
     
-    private String name;
-    private int age;
-    
-     public Student(String name, int age) {
-         
-        this.name   = name;
-        this.age    = age;
-  
+    private String lastname;
+    private String firstname;
+    private String DoB;
+     
+    @Autowired
+    private Address address;
+    private Grade grade;
+ 
+    public String getLastName(){
+        return lastname;
     }
-
-    @Override
-    public String toString() {
-        return name+" "+age; //To change body of generated methods, choose Tools | Templates.
+    public void setLastName(String lastname){
+        this.lastname = lastname;
+    }
+    public String getFirstName(){
+        return firstname;
+    }
+    public void setFirstName(String FirstName){
+        this.firstname = firstname;
+    }
+    public String getDoB(){
+        return DoB;
+    }
+    public void setDob(String DoB){
+        this.DoB = DoB;
+    }
+    
+    public Address getAddress() {
+		return address;
+    }
+    public void setAddress(Address address) {
+		this.address = address;
+    }
+   
+    public Grade getGrade() {
+		return grade;
+    }
+    public void setGrade(Grade grade) {
+		this.grade = grade;
     }
     
     
